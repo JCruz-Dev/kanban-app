@@ -1,8 +1,8 @@
 import React from 'react';
-import { Title } from './Title';
+import { Content } from './Content';
 
 const App = () => {
-    return <Title />;
+    return <Content />;
 };
 
 export default App;
