@@ -4,5 +4,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './App.jsx';
 import './firebase'
+import GlobalContextProvider from './hooks/context';
 
-render(<App />, document.getElementById('app'));
+render(<GlobalContextProvider><App /></GlobalContextProvider>, document.getElementById('app'));
