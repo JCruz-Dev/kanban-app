@@ -2,7 +2,6 @@ import React from 'react'
 import { db } from '../firebase'
 import { GET_STAGES } from './constants'
 import { GlobalDispatchContext } from './context'
-import data from '../tasks'
 
 const useCollection = () => {
     const dispatch = React.useContext(GlobalDispatchContext)
