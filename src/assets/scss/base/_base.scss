@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    user-select: none;
+}
+select {
+    font-size: $small;
+    padding: 0.3rem 1rem 0.3rem 0;
+    border-color: $border-color;
+}

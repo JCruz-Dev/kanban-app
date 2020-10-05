@@ -1,0 +1,13 @@
+.icon_button_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-small;
+    padding: 0.3rem;
+    &:hover {
+        background-color: $bg-color;
+    }
+}
+.button_name {
+    font-size: $small;
+}

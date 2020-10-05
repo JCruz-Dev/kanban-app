@@ -1,0 +1,25 @@
+// Colors
+$white: #fff;
+$bg-color: #f3f3f3;
+$dark-1: #3f3939;
+$dark-2: #454444;
+$todo-state-color: #d8d8d8;
+$light-gray-color: #b2b6b2;
+$blue-1: #679ac2;
+$blue-2: #2b6fae;
+$blue-3: #266096;
+$blue-4: #238bd9;
+$beta-color: #74ae03;
+$border-color: #d7d6d6;
+
+// Font sizes
+$small: 0.85rem; //14px
+$normal: 1rem; //16px
+
+//Border radius
+$border-radius-small: 2px;
+
+body {
+    background-color: $white;
+    font-size: $normal;
+}
