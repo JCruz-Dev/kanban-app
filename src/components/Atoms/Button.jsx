@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from './Icon';
 import PropTypes from 'prop-types';
+import { Icon } from '@material-ui/core';
 
 export const NormalButton = ({ name, classes }, props) => {
     return (
@@ -11,7 +11,7 @@ export const NormalButton = ({ name, classes }, props) => {
 };
 
 export const IconButton = (
-    { iconName, buttonName, iconClasses, buttonClasses, nameClasses },
+    { iconName, buttonName, iconClasses, buttonClasses, nameClasses, iconSize },
     props
 ) => {
     return (
@@ -19,7 +19,9 @@ export const IconButton = (
             {...props}
             className={`icon_button_container button ${buttonClasses} `}
         >
-            <Icon name={iconName} classes={`${iconClasses}`} />
+            <Icon fontSize={iconSize} className={iconClasses}>
+                {iconName}
+            </Icon>
             <span className={`button_name ${nameClasses}`}>{buttonName}</span>
         </button>
     );
@@ -30,6 +32,7 @@ NormalButton.defaultProps = {
 };
 IconButton.defaultProps = {
     iconName: '',
+    iconSize: 'small',
     button_name: '',
     iconClasses: '',
     buttonClasses: '',
