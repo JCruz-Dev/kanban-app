@@ -1,5 +1,6 @@
 // Colors
 $white: #fff;
+$white2: #e3eff8e8;
 $bg-color: #f3f3f3;
 $dark-1: #3f3939;
 $dark-2: #454444;
@@ -9,12 +10,20 @@ $blue-1: #679ac2;
 $blue-2: #2b6fae;
 $blue-3: #266096;
 $blue-4: #238bd9;
+$blue-5: #184064;
+$blue-6: #23598b;
 $beta-color: #74ae03;
 $border-color: #d7d6d6;
 
 // Font sizes
+$xsmall: 0.65rem;
 $small: 0.85rem; //14px
 $normal: 1rem; //16px
+
+// Font weights
+$small-weight: 400;
+$medium-weight: 500;
+$large-weight: 700;
 
 //Border radius
 $border-radius-small: 2px;

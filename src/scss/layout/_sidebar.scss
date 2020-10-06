@@ -1,0 +1,74 @@
+.aside_logo {
+    background-color: $blue-5;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside_header {
+    background-color: $blue-6;
+    border-bottom: 1px solid rgba($color: $white, $alpha: 0.1);
+    padding: 0.3rem 0 0.3rem 0.8rem;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    span.material-icons.MuiIcon-root.aside_header_icon.MuiIcon-fontSizeSmall {
+        font-size: 1rem;
+        color: $white2;
+    }
+    &_title {
+        font-size: $xsmall;
+        color: $white2;
+        margin-left: 0.3rem;
+    }
+}
+.aside_header_items_container {
+    background-color: $blue-2;
+    .aside_header_item {
+        transition: all 0.2s;
+        padding: 0.5rem 0 0.5rem 0.8rem;
+        border-bottom: 1px solid rgba($color: $white, $alpha: 0.1);
+        font-weight: $small-weight;
+        font-size: $small;
+        color: $white;
+        cursor: pointer;
+        display: flex;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: $blue-5;
+        }
+        &_beta {
+            background: $beta-color;
+            border-radius: 20px;
+            padding: 0.2rem 0.4rem;
+            margin-left: 0.5rem;
+            font-size: $xsmall;
+        }
+        &.aside_item_active {
+            background: $white;
+            color: $blue-2;
+        }
+        &_arrow {
+            background-color: $blue-6;
+            border-radius: $border-radius-small;
+            align-self: flex-end;
+        }
+    }
+}
+.sidebar_items_two_columns {
+    display: grid !important;
+    grid-template-columns: 1fr 40px;
+}
+.sidebar_items_two_columns_beta {
+    display: grid !important;
+    grid-template-columns: 118px 40px;
+}
+.sidebar_items_third_columns {
+    display: grid !important;
+    grid-template-columns: 53px 43px 70px;
+    .aside_header_item_arrow {
+        justify-self: end;
+    }
+}
