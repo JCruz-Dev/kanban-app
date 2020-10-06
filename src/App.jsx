@@ -1,8 +1,14 @@
 import React from 'react';
-import { Content } from './Content';
+import Aside from './components/Organism/Aside';
+import Content from './Content';
 
 const App = () => {
-    return <Content />;
+    return (
+        <div className='main_content'>
+            <Aside />
+            <Content />
+        </div>
+    );
 };
 
 export default App;
