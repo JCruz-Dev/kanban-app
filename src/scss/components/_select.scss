@@ -1,0 +1,8 @@
+.select {
+    border-radius: $border-radius-small;
+    background: url(/images/arrow_drop_down-24px.svg) center right/1.5rem
+            no-repeat,
+        url(/images/close-24px.svg) center right 1.5rem/0.8rem no-repeat;
+    font-size: $small;
+    color: $dark-1;
+}

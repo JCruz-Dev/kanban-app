@@ -1,0 +1,12 @@
+.header_feature {
+    width: 40px;
+    height: 35px;
+    background: $white;
+    border: 1px solid $border-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_feature_icon {
+    color: $light-gray-color;
+}
