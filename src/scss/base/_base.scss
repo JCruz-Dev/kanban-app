@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 body {
+    font-size: $normal;
+    font-weight: $small-weight;
+    background: $white;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     min-height: 100vh;
@@ -23,4 +26,10 @@ select {
 p {
     margin-top: 0;
     margin-bottom: 0;
+}
+.label {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    column-gap: 0.3rem;
+    align-items: center;
 }

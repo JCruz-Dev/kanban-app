@@ -1,0 +1,35 @@
+.header_container {
+    border-bottom: 2px solid $border-color;
+    height: 50px;
+    width: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+.header_action_content {
+    display: flex;
+    .header_action_button {
+        margin-left: 1rem;
+        &_name {
+            color: $dark-1;
+            margin-left: 0.3rem;
+        }
+    }
+}
+.header_settings_content {
+    display: flex;
+    margin-left: auto;
+    .header_settings_item {
+        height: 3rem;
+        width: 50px;
+        text-align: center;
+        line-height: 2.5;
+        border-left: 1px solid $border-color;
+    }
+}
+// Material Icon Component Styling
+span.material-icons.MuiIcon-root.header_settings_item.MuiIcon-fontSizeSmall {
+    color: $main-header-icons;
+}

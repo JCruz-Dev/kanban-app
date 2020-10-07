@@ -1,5 +1,4 @@
 import React from 'react';
-// import '../../scss/components/select.css';
 const SelectInput = () => {
     return (
         <>

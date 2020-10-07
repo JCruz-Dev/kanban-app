@@ -1,0 +1,96 @@
+.action_header {
+    border-width: 1px;
+}
+.action_status {
+    display: flex;
+    align-items: center;
+    &_title {
+        margin-left: 0.5rem;
+        color: $dark-2;
+        font-weight: $small-weight;
+    }
+    // Material Icon Component Styling
+    span.material-icons.MuiIcon-root.MuiIcon-fontSizeSmall {
+        color: $light-gray-color;
+    }
+}
+.action_header_options {
+    margin-left: auto;
+    margin-right: 0.8rem;
+    transition: all 0.3s;
+    display: flex;
+    span.material-icons.MuiIcon-root.MuiIcon-fontSizeSmall {
+        color: $main-header-icons;
+    }
+    .action_header_options_search {
+        display: flex;
+        align-items: center;
+        & input {
+            width: 80px;
+            transition: all 0.3s;
+            position: relative;
+            font-size: $small;
+            padding-left: 1.7rem;
+            height: 30px;
+            border: none;
+            ::placeholder {
+                color: $dark-2;
+            }
+            &:focus {
+                width: 250px;
+            }
+        }
+        & span {
+            position: absolute;
+            margin-left: 0.3rem;
+            pointer-events: none;
+        }
+        &:focus {
+            background-color: red;
+            & input {
+                width: 250px;
+            }
+        }
+    }
+}
+// Filter
+.filter_content {
+    position: relative;
+    .tags_container {
+        position: absolute;
+        background: #fcfcfc;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.265188);
+        border-radius: 4px;
+        padding: 26px 24px;
+        width: 215px;
+        min-height: 255px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 2rem;
+    }
+    input[type='checkbox'] {
+        display: none;
+    }
+    &:hover {
+        .tags_container {
+            opacity: 1;
+            pointer-events: visible;
+        }
+    }
+}
+.action_header_options_filter {
+    margin-right: 1rem;
+    &_title {
+        margin-left: 0.5rem;
+        color: $dark-2;
+    }
+}
+span#check[data-circle='circle'] {
+    color: $blue-4;
+}
+.checkbox_name {
+    color: $dark-1;
+}

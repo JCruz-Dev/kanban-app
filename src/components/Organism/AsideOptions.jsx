@@ -13,6 +13,7 @@ const AsideOptions = () => {
                         titleClasses='aside_header_title'
                         name={name}
                         icon={icon}
+                        containerClasses='aside_header'
                     />
                     <div className='aside_header_items_container'>
                         {items.map(

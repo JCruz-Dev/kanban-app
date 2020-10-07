@@ -1,11 +1,15 @@
 .avatar_icon,
 .avatar_name {
-    color: $light-gray-color;
+    color: $main-header-icons;
+}
+.avatar_name {
+    font-size: $small;
 }
 .avatar_container {
     display: inline-flex;
     align-items: center;
     height: 50px;
-    border: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
     padding: 0.4rem;
 }
