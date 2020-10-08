@@ -1,0 +1,36 @@
+.column_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    height: 100vh;
+}
+.column_content {
+    border-right: 1px solid $columns-borders;
+    padding: 1rem 1rem 0 1rem;
+}
+.column_title {
+    display: inline-flex;
+    margin-bottom: 2.3125rem;
+    &_name {
+        font-weight: $medium-weight;
+        color: $dark-2;
+    }
+    &_task_number {
+        width: 24px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $small;
+        border-radius: $border-radius-normal;
+        margin-right: 0.8rem;
+    }
+    &_task_number[data-color='0'] {
+        background-color: $todo-state-color;
+    }
+    &_task_number[data-color='1'] {
+        background-color: pink;
+    }
+    &_task_number[data-color='2'] {
+        background-color: $beta-color;
+    }
+}

@@ -41,3 +41,25 @@ export const header_options = [
         items: [{ name: 'Settings' }],
     },
 ];
+export const itemsFromBackend = [
+    { id: 1, content: "First task" },
+    { id: 2, content: "Second task" },
+    { id: 3, content: "Third task" },
+    { id: 4, content: "Fourth task" },
+    { id: 5, content: "Fifth task" }
+  ];
+  
+export const columnsFromBackend = {
+    ['1o9h87f']: {
+      name: "To do",
+      items: itemsFromBackend
+    },
+    ['a1q2we']: {
+      name: "In Progress",
+      items: []
+    },
+    ['00kduy']: {
+      name: "Done",
+      items: []
+    }
+  };
