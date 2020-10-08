@@ -31,7 +31,7 @@ const MainActionHeader = () => {
                     />
                     <div className='tags_container'>
                         <InputCheckIcon name='SEO article' />
-                        <InputCheckIcon name='longform' />
+                        <InputCheckIcon name='Longform' />
                         <InputCheckIcon name='Blog post' />
                     </div>
                 </div>

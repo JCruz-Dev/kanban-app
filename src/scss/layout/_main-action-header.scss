@@ -88,6 +88,9 @@
         color: $dark-2;
     }
 }
+span#check[data-circle='outline'] {
+    color: $light-gray-color;
+}
 span#check[data-circle='circle'] {
     color: $blue-4;
 }
