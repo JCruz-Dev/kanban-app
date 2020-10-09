@@ -267,6 +267,7 @@
         "foreach": "^2.0.5",
         "forever-agent": "^0.6.1",
         "form-data": "^2.3.3",
+        "formik": "^2.2.0",
         "forwarded": "^0.1.2",
         "fragment-cache": "^0.2.1",
         "fresh": "^0.5.2",
@@ -841,7 +842,8 @@
         "yallist": "^4.0.0",
         "yaml": "^1.10.0",
         "yargs": "^13.3.2",
-        "yargs-parser": "^13.1.2"
+        "yargs-parser": "^13.1.2",
+        "yup": "^0.29.3"
     },
     "devDependencies": {},
     "scripts": {
