@@ -6,6 +6,10 @@
 .column_content {
     border-right: 1px solid $columns-borders;
     padding: 1rem 1rem 0 1rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 }
 .column_title {
     display: inline-flex;

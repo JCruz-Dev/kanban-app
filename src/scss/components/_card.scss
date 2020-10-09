@@ -6,6 +6,7 @@
     max-width: 295px;
     height: 140px;
     padding: 18px 12px 0 12px;
+    margin-bottom: 1rem;
     cursor: pointer;
     &_title {
         font-weight: $large-weight;
@@ -24,6 +25,7 @@
     &_tag {
         color: $dark-1;
         margin-bottom: 0.3rem;
+        font-size: $small;
     }
     &_tag,
     &_date {
