@@ -11,6 +11,9 @@
         width: 0;
     }
 }
+.column-is-dragging {
+    background: lighten($color: $blue-1, $amount: 18%);
+}
 .column_title {
     display: inline-flex;
     margin-bottom: 2.3125rem;

@@ -3,18 +3,13 @@ import { Droppable } from 'react-beautiful-dnd';
 import StageCard from '../Molecules/StageCard';
 
 const StageColumn = ({ name, items, data, droppableId, index }) => {
-    console.log(items);
     return (
         <Droppable droppableId={droppableId} key={index}>
             {(provided, snapshot) => {
                 return (
                     <div
-                        className='column_content'
-                        style={{
-                            background: snapshot.isDraggingOver
-                                ? 'lightblue'
-                                : 'white',
-                        }}
+                        className={`column_content ${snapshot.isDraggingOver &&
+                            'column-is-dragging'}`}
                         ref={provided.innerRef}
                         {...provided.droppableProps}
                     >
