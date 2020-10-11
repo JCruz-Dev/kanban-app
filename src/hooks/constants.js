@@ -1,1 +1,1 @@
-export const GET_STAGES = "GET_TASKS";
+export const GET_STAGES = "GET_STAGES";
