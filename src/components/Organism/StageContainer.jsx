@@ -1,6 +1,7 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { columnsFromBackend } from '../../data';
+import { GET_STAGES } from '../../hooks/constants';
+import { GlobalDispatchContext, GlobalStateContext } from '../../hooks/context';
 import StageColumn from '../Molecules/StageColumn';
 
 const StageContainer = () => {
@@ -16,14 +17,19 @@ const StageContainer = () => {
             const [removed] = sourceItems.splice(source.index, 1);
             destItems.splice(destination.index, 0, removed);
             setColumns({
-                ...columns,
-                [source.droppableId]: {
-                    ...sourceColumn,
-                    items: sourceItems,
-                },
-                [destination.droppableId]: {
-                    ...destColumn,
-                    items: destItems,
+                type: GET_STAGES,
+                payload: {
+                    columnsItems: {
+                        ...columns,
+                        [source.droppableId]: {
+                            ...sourceColumn,
+                            items: sourceItems,
+                        },
+                        [destination.droppableId]: {
+                            ...destColumn,
+                            items: destItems,
+                        },
+                    },
                 },
             });
         } else {
@@ -32,22 +38,31 @@ const StageContainer = () => {
             const [removed] = copiedItems.splice(source.index, 1);
             copiedItems.splice(destination.index, 0, removed);
             setColumns({
-                ...columns,
-                [source.droppableId]: {
-                    ...column,
-                    items: copiedItems,
+                type: GET_STAGES,
+                payload: {
+                    columnsItems: {
+                        ...columns,
+                        [source.droppableId]: {
+                            ...column,
+                            items: copiedItems,
+                        },
+                    },
                 },
             });
         }
     };
-    const [columns, setColumns] = React.useState(columnsFromBackend);
+    const { columnsItems } = React.useContext(GlobalStateContext);
+    const dispatch = React.useContext(GlobalDispatchContext);
+
     return (
         <div className='column_grid'>
             <DragDropContext
-                onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+                onDragEnd={(result) =>
+                    onDragEnd(result, columnsItems, dispatch)
+                }
             >
-                {Object.entries(columns).map(([columnId, column], index) => {
-                    return (
+                {Object.entries(columnsItems).map(
+                    ([columnId, column], index) => (
                         <StageColumn
                             droppableId={columnId}
                             key={index}
@@ -56,8 +71,8 @@ const StageContainer = () => {
                             items={column.items}
                             data={index}
                         />
-                    );
-                })}
+                    )
+                )}
             </DragDropContext>
         </div>
     );

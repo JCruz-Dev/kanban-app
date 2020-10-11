@@ -27,15 +27,14 @@ export const InputCheckIcon = ({
     const [checkState, setCheck] = useState(false);
     const handleChange = (event) => {
         setCheck(event.target.checked);
-        // No, este es el component Hijo, el evento Onchange viene por props desde el padre
     };
     return (
         <>
-            <label htmlFor={`checkbox-${name}`} className='label'>
+            <label htmlFor={name} className='label'>
                 <input
                     type='checkbox'
                     onChange={handleChange}
-                    id={`checkbox-${name}`}
+                    id={name}
                     defaultChecked={checkState}
                     className={checkClasses}
                 />

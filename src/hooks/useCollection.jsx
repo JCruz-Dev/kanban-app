@@ -1,10 +1,11 @@
-import React from 'react'
-import { db } from '../firebase'
-import { GET_STAGES } from './constants'
-import { GlobalDispatchContext } from './context'
+import React from 'react';
+// import { db } from '../firebase'
+import { GET_STAGES } from './constants';
+import { GlobalDispatchContext } from './context';
+import { itemsFromBackend, columnsFromBackend } from '../data';
 
 const useCollection = () => {
-    const dispatch = React.useContext(GlobalDispatchContext)
+    const dispatch = React.useContext(GlobalDispatchContext);
 
     React.useEffect(() => {
         // db.collection(collection).onSnapshot(snapshot => {
@@ -20,17 +21,16 @@ const useCollection = () => {
         //             progress: [data[0].progress],
         //             done: [data[0].done]
         //         }
-        //     }) 
+        //     })
         // })
-        // dispatch({
-        //     type: GET_STAGES,
-        //     payload: {
-        //         todo: data.todo,
-        //         progress: data.progress,
-        //         done: data.done
-        //     }
-        // })
-    }, [])
-}
+        dispatch({
+            type: GET_STAGES,
+            payload: {
+                items: itemsFromBackend,
+                columnsItems: columnsFromBackend,
+            },
+        });
+    }, []);
+};
 
-export default useCollection
+export default useCollection;
