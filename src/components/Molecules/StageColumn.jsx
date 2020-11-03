@@ -39,4 +39,4 @@ const StageColumn = ({ name, items, data, droppableId, index }) => {
     );
 };
 
-export default StageColumn;
+export default React.memo(StageColumn);
