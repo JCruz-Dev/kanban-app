@@ -59,7 +59,6 @@ const StageContainer = () => {
         searchActive ? setData(filteredColumns) : setData(columnContent);
     }, [searchActive][filteredColumns]);
     const dispatch = React.useContext(GlobalDispatchContext);
-    console.log(data, 'data');
     return (
         <div className='column_grid'>
             <DragDropContext

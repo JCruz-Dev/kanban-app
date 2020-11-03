@@ -8,6 +8,7 @@ import { SEARCH_CONTENT } from '../../hooks/constants';
 const MainActionHeader = () => {
     const state = React.useContext(GlobalStateContext);
     const dispatch = React.useContext(GlobalDispatchContext);
+    const [Check, setChecked] = React.useState([]);
 
     const handleSearchChange = (event) => {
         let searchTerm = event.target.value;
@@ -43,9 +44,42 @@ const MainActionHeader = () => {
         });
     };
 
-    const handleFilterTag = (value) => {
-        console.log(id);
+    const handleFilterTag = (value, checked) => {
+        const currentTag = Check.indexOf(value);
+        const newChecked = [...Check];
+        if (currentTag === -1) {
+            newChecked.push(value);
+        } else {
+            newChecked.splice(currentTag, 1);
+        }
+        let data = { ...state.columnContent };
+        let filteredByTag = Object.entries(data).map(([columnId, _]) =>
+            data[columnId].items.filter((item) => newChecked.includes(item.tag))
+        );
+        setChecked(newChecked);
+
+        dispatch({
+            type: SEARCH_CONTENT,
+            payload: {
+                filteredColumns: {
+                    ['0o9h87f']: {
+                        name: data['0o9h87f'].name,
+                        items: filteredByTag[0],
+                    },
+                    ['11q2wef']: {
+                        name: data['11q2we'].name,
+                        items: filteredByTag[1],
+                    },
+                    ['20kduy']: {
+                        name: data['0o9h87f'].name,
+                        items: filteredByTag[2],
+                    },
+                },
+                searchActive: checked,
+            },
+        });
     };
+    console.log(Check);
     return (
         <div className='header_container action_header'>
             <TitleIcon

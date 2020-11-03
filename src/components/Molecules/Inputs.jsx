@@ -29,7 +29,7 @@ export const InputCheckIcon = ({
     const [checkState, setCheck] = useState(false);
     const handleChange = (event) => {
         setCheck(event.target.checked);
-        console.log(event.target.getAttribute('data-number'));
+        onChange(event.target.name, event.target.checked);
     };
     return (
         <>
@@ -38,6 +38,7 @@ export const InputCheckIcon = ({
                     type='checkbox'
                     onChange={(e) => handleChange(e, id)}
                     id={name}
+                    name={name}
                     data-number={id}
                     defaultChecked={checkState}
                     className={checkClasses}
