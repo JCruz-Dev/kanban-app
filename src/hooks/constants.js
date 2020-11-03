@@ -1,1 +1,2 @@
 export const GET_STAGES = "GET_STAGES";
+export const SEARCH_CONTENT =  "SEARCH_CONTENT"

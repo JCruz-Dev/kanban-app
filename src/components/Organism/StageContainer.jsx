@@ -19,7 +19,7 @@ const StageContainer = () => {
             setColumns({
                 type: GET_STAGES,
                 payload: {
-                    columnsItems: {
+                    columnContent: {
                         ...columns,
                         [source.droppableId]: {
                             ...sourceColumn,
@@ -40,7 +40,7 @@ const StageContainer = () => {
             setColumns({
                 type: GET_STAGES,
                 payload: {
-                    columnsItems: {
+                    columnContent: {
                         ...columns,
                         [source.droppableId]: {
                             ...column,
@@ -51,31 +51,33 @@ const StageContainer = () => {
             });
         }
     };
-    const { columnsItems } = React.useContext(GlobalStateContext);
+    const { columnContent, filteredColumns, searchActive } = React.useContext(
+        GlobalStateContext
+    );
+    const [data, setData] = React.useState({});
+    React.useEffect(() => {
+        searchActive ? setData(filteredColumns) : setData(columnContent);
+    }, [searchActive][filteredColumns]);
     const dispatch = React.useContext(GlobalDispatchContext);
-
+    console.log(data, 'data');
     return (
         <div className='column_grid'>
             <DragDropContext
-                onDragEnd={(result) =>
-                    onDragEnd(result, columnsItems, dispatch)
-                }
+                onDragEnd={(result) => onDragEnd(result, data, dispatch)}
             >
-                {Object.entries(columnsItems).map(
-                    ([columnId, column], index) => (
-                        <StageColumn
-                            droppableId={columnId}
-                            key={index}
-                            index={columnId}
-                            name={column.name}
-                            items={column.items}
-                            data={index}
-                        />
-                    )
-                )}
+                {Object.entries(data).map(([columnId, column], index) => (
+                    <StageColumn
+                        droppableId={columnId}
+                        key={index}
+                        index={columnId}
+                        name={column.name}
+                        items={column.items}
+                        data={index}
+                    />
+                ))}
             </DragDropContext>
         </div>
     );
 };
 
-export default StageContainer;
+export default React.memo(StageContainer);

@@ -27,7 +27,7 @@ const useCollection = () => {
             type: GET_STAGES,
             payload: {
                 items: itemsFromBackend,
-                columnsItems: columnsFromBackend,
+                columnContent: columnsFromBackend,
             },
         });
     }, []);

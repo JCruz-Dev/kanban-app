@@ -23,18 +23,22 @@ export const InputCheckIcon = ({
     checkClasses,
     nameClasses,
     iconClasses,
+    onChange,
+    id,
 }) => {
     const [checkState, setCheck] = useState(false);
     const handleChange = (event) => {
         setCheck(event.target.checked);
+        console.log(event.target.getAttribute('data-number'));
     };
     return (
         <>
             <label htmlFor={name} className='label'>
                 <input
                     type='checkbox'
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, id)}
                     id={name}
+                    data-number={id}
                     defaultChecked={checkState}
                     className={checkClasses}
                 />

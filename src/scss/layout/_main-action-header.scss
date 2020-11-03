@@ -26,7 +26,7 @@
         display: flex;
         align-items: center;
         & input {
-            width: 80px;
+            // width: 80px;
             transition: all 0.3s;
             position: relative;
             font-size: $small;
@@ -37,7 +37,7 @@
                 color: $dark-2;
             }
             &:focus {
-                width: 250px;
+                // width: 250px;
             }
         }
         & span {

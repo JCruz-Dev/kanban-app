@@ -42,23 +42,24 @@ export const header_options = [
   },
 ];
 export const itemsFromBackend = [
-  { id: '145h87f', title: "Task 1", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
-  { id: "1h8uyl2", title: "Task 2", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
-  { id: "1plkxj", title: "Task 3", description: "https://blog.gesrepair.com/", tag: "Blog post", date: '09/15/201' },
-  { id: "truvshr", title: "Task 4", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
-  { id: "9i8shj4", title: "Task 5", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' }
+  { id: '145h87f', title: "Lista de Compras", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
+  { id: '12hd7f', title: "Lista de Compras", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
+  { id: "1h8uyl2", title: "Simpson", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
+  { id: "1plkxj", title: "Maveleous", description: "https://blog.gesrepair.com/", tag: "Blog post", date: '09/15/201' },
+  { id: "truvshr", title: "La crema Loco", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
+  { id: "9i8shj4", title: "Lord Biox", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' }
 ];
 
 export const columnsFromBackend = {
-  ['1o9h87f']: {
+  ['0o9h87f']: {
     name: "To do",
     items: itemsFromBackend
   },
-  ['a1q2we']: {
+  ['11q2we']: {
     name: "In Progress",
     items: []
   },
-  ['00kduy']: {
+  ['20kduy']: {
     name: "Done",
     items: []
   }

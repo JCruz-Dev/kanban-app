@@ -1,21 +1,36 @@
 import React from 'react';
-import { GET_STAGES, FILTER_SEARCH } from './constants';
+import { GET_STAGES, SEARCH_CONTENT } from './constants';
 
 export const GlobalStateContext = React.createContext();
 export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
     items: [],
-    columnsItems: {},
+    columnContent: {},
+    searchParam: '',
+    filteredColumns: {},
+    searchActive: false,
+    searchTerm: '',
 };
 function reducer(state, action) {
-    const { items, columnsItems } = action.payload;
+    const {
+        items,
+        columnContent,
+        filteredColumns,
+        searchActive,
+    } = action.payload;
     switch (action.type) {
         case GET_STAGES:
             return {
                 ...state,
                 items,
-                columnsItems,
+                columnContent,
+            };
+        case SEARCH_CONTENT:
+            return {
+                ...state,
+                filteredColumns,
+                searchActive,
             };
         default:
             return state;
