@@ -42,12 +42,12 @@ export const header_options = [
   },
 ];
 export const itemsFromBackend = [
-  { id: '145h87f', title: "Lista de Compras", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
-  { id: '12hd7f', title: "Lista de Compras", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
-  { id: "1h8uyl2", title: "Simpson", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
-  { id: "1plkxj", title: "Maveleous", description: "https://blog.gesrepair.com/", tag: "Blog post", date: '09/15/201' },
-  { id: "truvshr", title: "La crema Loco", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
-  { id: "9i8shj4", title: "Lord Biox", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' }
+  { id: '145h87f', title: "Shopping Form", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
+  { id: '12hd7f', title: "Contact Form", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' },
+  { id: "1h8uyl2", title: "Wakanda's History", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
+  { id: "1plkxj", title: "Tips for Developers", description: "https://blog.gesrepair.com/", tag: "Blog post", date: '09/15/201' },
+  { id: "truvshr", title: "Meta tags for your site", description: "https://blog.gesrepair.com/", tag: "SEO article", date: '09/15/201' },
+  { id: "9i8shj4", title: "IT management form", description: "https://blog.gesrepair.com/", tag: "Longform", date: '09/15/201' }
 ];
 
 export const columnsFromBackend = {

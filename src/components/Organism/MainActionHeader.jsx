@@ -44,20 +44,26 @@ const MainActionHeader = () => {
         });
     };
 
-    const handleFilterTag = (value, checked) => {
+    const handleFilterTag = (value) => {
+        //Search if the values in in Check state
         const currentTag = Check.indexOf(value);
         const newChecked = [...Check];
+        //Checks if currentTag is on array. IF not, adds it to the Check state or remove it.
         if (currentTag === -1) {
             newChecked.push(value);
         } else {
             newChecked.splice(currentTag, 1);
         }
         let data = { ...state.columnContent };
+
+        //Checks the Filter data by tag with the Check State
         let filteredByTag = Object.entries(data).map(([columnId, _]) =>
             data[columnId].items.filter((item) => newChecked.includes(item.tag))
         );
         setChecked(newChecked);
-
+        //Checks is any on the filters are still enabled.
+        //I used new
+        let isFilterActive = newChecked.length > 0 ? true : false;
         dispatch({
             type: SEARCH_CONTENT,
             payload: {
@@ -75,11 +81,10 @@ const MainActionHeader = () => {
                         items: filteredByTag[2],
                     },
                 },
-                searchActive: checked,
+                searchActive: isFilterActive,
             },
         });
     };
-    console.log(Check);
     return (
         <div className='header_container action_header'>
             <TitleIcon
